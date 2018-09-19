@@ -1,0 +1,32 @@
+.ribbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 48px;
+  width: 100%;
+  padding: 8px;
+  
+  background-color: rgb(32, 32, 32, 1.0);
+}
+
+.ribbon-content {
+  height: 100%;
+  display: inline;
+  font-size: 32px;
+  vertical-align: middle;
+  text-decoration: none;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h1.ribbon-content {
+  margin-left: 16px;
+  color: white;
+  
+  line-height: 0;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-family: sans-serif;
+}
