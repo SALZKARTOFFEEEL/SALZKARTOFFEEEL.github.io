@@ -1,0 +1,16 @@
+RewriteEngine on
+
+# Stop hotlinking.
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} ^https?://([^/]+)/ [NC]
+RewriteCond %1#%{HTTP_HOST} !^(.+)#\1$
+RewriteRule \.(png|gif|svg)$ - [NC,F,L]
+
+# Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# Prevent directory listings
+Options All -Indexes
