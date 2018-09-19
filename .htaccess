@@ -4,7 +4,7 @@ RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} ^https?://([^/]+)/ [NC]
 RewriteCond %1#%{HTTP_HOST} !^(.+)#\1$
-RewriteRule \.(png|gif|svg)$ - [NC,F,L]
+RewriteRule \.(png|gif|svg|css)$ - [NC,F,L]
 
 # Prevent viewing of .htaccess file
 <Files .htaccess>
