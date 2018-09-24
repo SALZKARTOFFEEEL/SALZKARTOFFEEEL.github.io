@@ -6,7 +6,7 @@ body {
   position: sticky;
   left: 0;
   top: 0;
-  height: 48px;
+  height: auto;
   width: -webkit-fill-available;
   padding: 8px;
   
@@ -14,19 +14,18 @@ body {
 }
 
 .ribbon-content {
-  height: 100%;
+  height: 48px;
   display: inline;
   font-size: 32px;
   vertical-align: middle;
   text-decoration: none;
-  
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+}
+
+.ribbon-content:not(:last-child) {
+  padding-right: 16px;
 }
 
 h1.ribbon-content {
-  margin-left: 16px;
   color: white;
   
   line-height: 0;
