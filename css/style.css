@@ -1,13 +1,13 @@
 body {
   display: block;
   text-align: left;
-  margin: 64px;
+  margin: 10vh 10vw;
   background-color: #3B305B;
   
   font-family: "Ubuntu", "Aller", "Open Sans", sans-serif;
 }
 body * {
-  display: block;
+  display: inline-block;
   color: #FDE962;
 }
 
@@ -19,12 +19,18 @@ h1 > a:not(:hover), h2 > a:not(:hover) {
 }
 
 h1 {
+  display: block;
   font-size: 4rem;
-  margin: 32px 0px;
+  margin: 0px;
 }
 h2 {
+  display: block;
   font-size: inherit;
-  margin: 16px 0px;
+  margin: 0px;
+}
+
+p {
+  display: block;
 }
 
 .description::before {
@@ -36,6 +42,17 @@ h2 {
 
 li {
   display: list-item;
+}
+
+ul, ol {
+  margin: 0;
+}
+
+ul.headings {
+  padding-left: 32px;
+}
+ul.items {
+  padding-left: 16px;
 }
 
 ul.headings > li {
