@@ -32,6 +32,9 @@ h2 {
 p {
   display: block;
 }
+p * {
+  display: inline;
+}
 
 .description::before {
   content: "–";
