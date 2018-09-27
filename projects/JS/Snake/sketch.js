@@ -37,7 +37,20 @@ class Snake {
     if (snek.x == apple.x && snek.y == apple.y) {
       apple = apple.collect();
     }
+    
+    // die from out of frame:
+    if (this.x < 0 ||this.y < 0 || this.x >= sizeX || this.y >= sizeY) {
+      snek = this.die();
+    }
+    
+    // die from touching own trail:
+    for (var i = 0; i < this.trail.length; i++) {
+      if (this.x == this.trail[i].x && this.y == this.trail[i].y) {
+        snek = this.die();
+      }
+    }
   }
+  
   drawTrail() {
     fill(59, 48, 91);
     for (var i = 0; i < this.trail.length; i++) {
@@ -47,6 +60,11 @@ class Snake {
   drawHead() {
     fill(253, 233, 98);
     rect(coordsX(this.x), coordsY(this.y), scaleX, scaleY);
+  }
+  
+  die() {
+    apple = apple.collect();
+    return new Snake();
   }
 }
 
@@ -117,17 +135,27 @@ function draw() {
 }
 
 function keyPressed() {
+  // the following code is crap...
+  
   if (keyCode == UP_ARROW || key == "w") {
-    snek.d = 0;
+    if (snek.d != 2) {
+      snek.d = 0;
+    }
   }
   else if (keyCode == RIGHT_ARROW || key == "d") {
-    snek.d = 1;
+    if (snek.d != 3) {
+      snek.d = 1;
+    }
   }
   else if (keyCode == DOWN_ARROW || key == "s") {
-    snek.d = 2;
+    if (snek.d != 0) {
+      snek.d = 2;
+    }
   }
   else if (keyCode == LEFT_ARROW || key == "a") {
-    snek.d = 3;
+    if (snek.d != 1) {
+      snek.d = 3;
+    }
   }
   else {
     return true;
