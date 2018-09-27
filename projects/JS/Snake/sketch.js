@@ -1,7 +1,7 @@
 class Snake {
-  constructor(x = -1, y = -1, l = 0) {
-    this.x = x==-1? round(random(sizeX-1)) : x;
-    this.y = y==-1? round(random(sizeY-1)) : y;
+  constructor(x = false, y = false, l = 0) {
+    this.x = x===false? round(random(sizeX-1)) : x;
+    this.y = y===false? round(random(sizeY-1)) : y;
     this.l = l;
     
     this.d = -1;
@@ -107,7 +107,7 @@ function setup() {
   noStroke();
   
   snek = new Snake();
-  console.log("Spawned snake at [" + snek.x + ", " + snek.y + "].");
+  console.log("Snake spawned at [" + snek.x + ", " + snek.y + "].");
   
   apple = new Apple();
   console.log("Apple spawned at [" + apple.x + ", " + apple.y + "].");
@@ -135,7 +135,7 @@ function draw() {
 }
 
 function keyPressed() {
-  // the following code is crap...
+  // the following code is crap
   
   if (keyCode == UP_ARROW || key == "w") {
     if (snek.d != 2) {
