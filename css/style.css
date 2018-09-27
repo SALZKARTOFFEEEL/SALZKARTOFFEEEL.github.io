@@ -1,0 +1,50 @@
+body {
+  display: block;
+  text-align: left;
+  margin: 64px;
+  background-color: #3B305B;
+  
+  font-family: "Ubuntu", "Aller", "Open Sans", sans-serif;
+}
+body * {
+  display: block;
+  color: #FDE962;
+}
+
+a {
+  width: 0;
+}
+h1 > a:not(:hover), h2 > a:not(:hover) {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 32px 0px;
+}
+h2 {
+  font-size: inherit;
+  margin: 16px 0px;
+}
+
+.description::before {
+  content: "–";
+}
+.description, .title {
+  display: inline;
+}
+
+li {
+  display: list-item;
+}
+
+ul.headings > li {
+  margin-top: 32px;
+  list-style-type: disc;
+  font-size: 2.5rem;
+}
+ul.items > li {
+  margin-top: 16px;
+  list-style-type: square;
+  font-size: 1.25rem;
+}
