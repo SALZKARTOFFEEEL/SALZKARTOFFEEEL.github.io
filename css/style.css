@@ -11,22 +11,35 @@ body * {
   color: #FDE962;
 }
 
-a {
-  width: 0;
-}
-h1 > a:not(:hover), h2 > a:not(:hover) {
-  text-decoration: none;
+*::selection {
+  color: #3B305B;
+  background-color: #FDE962;
 }
 
-h1 {
+a:active:not(.jump) {
+  color: #E0375A;
+}
+a.jump:not(:hover) {
+  text-decoration: none;
+}
+a.hidden {
+  color: inherit;
+  text-decoration: none;
+}
+a.out::after {
+  content: "⮥";
+  margin-left: 0.2em;
+}
+
+h1, h2 {
   display: block;
-  font-size: 4rem;
   margin: 0px;
 }
-h2 {
-  display: block;
+li > h2 {
   font-size: inherit;
-  margin: 0px;
+}
+h1 {
+  font-size: 4em;
 }
 
 p {
