@@ -6,6 +6,9 @@ RewriteCond %{HTTP_REFERER} ^https?://([^/]+)/ [NC]
 RewriteCond %1#%{HTTP_HOST} !^(.+)#\1$
 RewriteRule \.(png|gif|svg)$ - [NC,F,L]
 
+# Redirect /index.html to just the directory
+RewriteRule (.+)/index.html?$ /$1/ [R=301,NC,L]
+
 # Prevent viewing of .htaccess file
 <Files .htaccess>
 order allow,deny
@@ -14,3 +17,4 @@ deny from all
 
 # Prevent directory listings
 Options All -Indexes
+
