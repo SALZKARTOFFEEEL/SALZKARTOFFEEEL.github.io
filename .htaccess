@@ -1,8 +1,5 @@
 RewriteEngine on
 
-# Redirect /index.html to just the directory
-RewriteRule (.+)/index.html?$ /$1/ [R=301,NC,L]
-
 # Stop hotlinking.
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} ^https?://([^/]+)/ [NC]
