@@ -1,0 +1,50 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.color {
+  position: relative;
+  width: 10em;
+  height: 20em;
+
+  margin: var(--unit-size);
+  border-radius: var(--unit-size);
+  box-shadow: 0 0 .25em white;
+
+  background-color: var(--color);
+}
+
+.color > .description {
+  position: absolute;
+  bottom: 0px;
+
+  width: -webkit-fill-available;
+  padding: var(--unit-size);
+
+  color: var(--color-dark);
+
+  border-bottom-right-radius: var(--unit-size);
+  border-bottom-left-radius: var(--unit-size);
+  background-color: white;
+}
+
+.color > .description ::selection {
+  color: white;
+}
+
+.color > .description > *:not(:last-child) {
+  margin-bottom: var(--unit-size);
+}
+
+.color.default  {--color: var(--color-default);}
+.color.success  {--color: var(--color-success);}
+.color.failure  {--color: var(--color-failure);}
+.color.generic  {--color: var(--color-generic);}
+.color.dark     {--color: var(--color-dark);   }
+
+
+.description .values {
+  width: 100%;
+}

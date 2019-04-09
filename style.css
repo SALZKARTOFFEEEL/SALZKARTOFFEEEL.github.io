@@ -1,0 +1,72 @@
+html {
+  --color-default: hsl(048, 100%, 72%);
+  --color-success: hsl(120, 100%, 72%);
+  --color-failure: hsl(000, 100%, 72%);
+  --color-generic: hsl(216, 100%, 72%);
+  --color-dark: hsl(240, 16.3%, 12.9%);
+
+  --unit-size: 1em;
+}
+
+body.dark {
+  --color: var(--color-default);
+  --background-color: var(--color-dark);
+}
+body.light {
+  --color: var(--color-dark);
+  --background-color: var(--color-default);
+}
+
+body {
+  font-family: sans-serif;
+
+  margin: 0px;
+
+  text-align: center;
+
+  color: var(--color);
+  background-color: var(--background-color);
+}
+
+.construction-sign {
+  position: static;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+
+  padding: var(--unit-size);
+
+  font-weight: bolder;
+
+  background-color: var(--color-failure);
+  color: white;
+}
+
+h3 {
+  font-weight: lighter;
+}
+
+::selection {
+  color: var(--background-color);
+  background-color: var(--color);
+}
+
+.soon:hover::after {
+  content: "™";
+  position: absolute;
+}
+
+
+.major {
+  font-weight: bold;
+}
+.minor {
+  font-weight: lighter;
+}
+
+
+td, th {
+  font-weight: normal;
+
+  width: 100%;
+}
