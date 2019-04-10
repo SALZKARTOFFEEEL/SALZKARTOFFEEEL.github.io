@@ -79,18 +79,3 @@
 .hsl > *:nth-child(even) {
   text-align: right;
 }
-
-.colon::after {
-  content: ":";
-  position: absolute;
-}
-
-.percentage::after {
-  content: "%";
-  position: absolute;
-}
-
-.angle::after {
-  content: "°";
-  position: absolute;
-}

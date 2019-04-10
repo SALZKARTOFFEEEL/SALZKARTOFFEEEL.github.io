@@ -4,7 +4,7 @@ body {
   margin: 0px;
 
   text-align: center;
-  
+
   --color: var(--color-default);
   --background-color: var(--color-dark);
 
@@ -63,9 +63,15 @@ h3 {
   font-weight: lighter;
 }
 
-
-td, th {
-  font-weight: normal;
-
-  width: 100%;
+.colon::after {
+  content: ":";
+  position: absolute;
+}
+.percentage::after {
+  content: "%";
+  position: absolute;
+}
+.angle::after {
+  content: "°";
+  position: absolute;
 }
