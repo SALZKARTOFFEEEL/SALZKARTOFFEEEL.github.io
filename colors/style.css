@@ -7,7 +7,8 @@
 .color-container {
   position: relative;
 
-  width: 10em;
+  width: 24vmin;
+  min-width: calc(8 * var(--unit-size));
   height: auto;
 
   text-align: center;
