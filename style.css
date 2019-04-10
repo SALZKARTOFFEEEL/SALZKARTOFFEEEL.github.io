@@ -37,9 +37,9 @@ a {
 a.pagelink::after {
   content: "#";
   position: absolute;
+
   padding-left: .25em;
   font-weight: lighter;
-
   font-size: smaller;
 
   opacity: 0;
@@ -58,8 +58,10 @@ a.pagelink:hover::after {
 
   font-weight: bolder;
 
-  background-color: var(--color-failure);
-  color: white;
+  --background-color: var(--color-failure);
+  --color: var(--color-bright);
+  color: var(--color);
+  background-color: var(--background-color);
 }
 
 h3 {

@@ -82,6 +82,7 @@
 
 .colon::after {
   content: ":";
+  position: absolute;
 }
 
 .percentage::after {
