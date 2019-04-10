@@ -64,6 +64,8 @@
 
   font-variant: tabular-nums;
 
+  color: var(--background-color);
+
   transition: opacity var(--unit-time);
 }
 .color-container .hsl {
