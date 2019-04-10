@@ -20,7 +20,8 @@
   transition: background-color var(--unit-time), color var(--unit-time);
 }
 
-.color-container:hover {
+.color-container:hover,
+.color-container:target {
   color: var(--color-dark);
   background-color: var(--color-bright);
 }
@@ -60,10 +61,16 @@
   grid-template-columns: auto auto;
   justify-content: space-around;
 
+  font-variant: tabular-nums;
+
   transition: opacity var(--unit-time);
 }
-.color-container:not(:hover) .hsl {
+.color-container .hsl {
   opacity: 0;
+}
+.color-container:hover .hsl,
+.color-container:target .hsl {
+  opacity: inherit;
 }
 
 .hsl > *:nth-child(odd) {

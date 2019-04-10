@@ -30,6 +30,24 @@ body {
   background-color: var(--background-color);
 }
 
+a {
+  color: unset;
+  text-decoration: unset;
+}
+a.pagelink::after {
+  content: "#";
+  position: absolute;
+  padding-left: .25em;
+  font-weight: lighter;
+
+  font-size: smaller;
+
+  opacity: 0;
+}
+a.pagelink:hover::after {
+  opacity: 1;
+}
+
 .construction-sign {
   position: static;
   top: 0px;
