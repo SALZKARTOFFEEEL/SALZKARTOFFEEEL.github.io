@@ -24,6 +24,7 @@ a.pagelink::after {
   font-weight: lighter;
   font-size: smaller;
 
+  transition: opacity var(--unit-time);
   opacity: 0;
 }
 a.pagelink:hover::after {
