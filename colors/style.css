@@ -28,12 +28,16 @@
 
 .color {
   width: auto;
-  height: 10em;
   margin: calc(var(--unit-size) / 2);
 
   border-radius: calc(var(--unit-size) / 2);
 
   background-color: var(--color);
+}
+.color::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 .description {
