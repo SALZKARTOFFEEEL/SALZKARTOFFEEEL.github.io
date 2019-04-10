@@ -1,18 +1,12 @@
-body.dark {
-  --color: var(--color-default);
-  --background-color: var(--color-dark);
-}
-body.light {
-  --color: var(--color-dark);
-  --background-color: var(--color-default);
-}
-
 body {
   font-family: "Aller", "Ubuntu", "Arial", sans-serif;
 
   margin: 0px;
 
   text-align: center;
+  
+  --color: var(--color-default);
+  --background-color: var(--color-dark);
 
   color: var(--color);
   background-color: var(--background-color);
