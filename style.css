@@ -4,8 +4,10 @@ html {
   --color-failure: hsl(000, 100%, 72%);
   --color-generic: hsl(216, 100%, 72%);
   --color-dark: hsl(240, 16.3%, 12.9%);
+  --color-bright: white;
 
   --unit-size: 1em;
+  --unit-time: .25s;
 }
 
 body.dark {
@@ -43,7 +45,7 @@ body {
 }
 
 h3 {
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 ::selection {
@@ -58,7 +60,7 @@ h3 {
 
 
 .major {
-  font-weight: bold;
+  font-weight: bolder;
 }
 .minor {
   font-weight: lighter;

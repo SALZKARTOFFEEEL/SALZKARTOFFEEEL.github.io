@@ -4,47 +4,81 @@
   justify-content: center;
 }
 
-.color {
+.color-container {
   position: relative;
+
   width: 10em;
-  height: 20em;
+  height: auto;
+
+  text-align: center;
 
   margin: var(--unit-size);
   border-radius: var(--unit-size);
-  box-shadow: 0 0 .25em white;
+
+  color: var(--color);
+  background-color: var(--color-dark);
+  transition: background-color var(--unit-time), color var(--unit-time);
+}
+
+.color-container:hover {
+  color: var(--color-dark);
+  background-color: var(--color-bright);
+}
+
+
+.color {
+  width: auto;
+  height: 10em;
+  margin: calc(var(--unit-size) / 2);
+
+  border-radius: calc(var(--unit-size) / 2);
 
   background-color: var(--color);
 }
 
-.color > .description {
-  position: absolute;
-  bottom: 0px;
-
-  width: -webkit-fill-available;
-  padding: var(--unit-size);
-
-  color: var(--color-dark);
-
-  border-bottom-right-radius: var(--unit-size);
-  border-bottom-left-radius: var(--unit-size);
-  background-color: white;
+.description {
+  margin: var(--unit-size);
 }
 
-.color > .description ::selection {
-  color: white;
-}
-
-.color > .description > *:not(:last-child) {
+.description > *:not(:last-child) {
   margin-bottom: var(--unit-size);
 }
 
-.color.default  {--color: var(--color-default);}
-.color.success  {--color: var(--color-success);}
-.color.failure  {--color: var(--color-failure);}
-.color.generic  {--color: var(--color-generic);}
-.color.dark     {--color: var(--color-dark);   }
+.default  {--color: var(--color-default);}
+.success  {--color: var(--color-success);}
+.failure  {--color: var(--color-failure);}
+.generic  {--color: var(--color-generic);}
+.dark     {--color: var(--color-dark);   }
 
 
-.description .values {
-  width: 100%;
+.hsl {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+
+  transition: opacity var(--unit-time);
+}
+.color-container:not(:hover) .hsl {
+  opacity: 0;
+}
+
+.hsl > *:nth-child(odd) {
+  text-align: left;
+}
+.hsl > *:nth-child(even) {
+  text-align: right;
+}
+
+.colon::after {
+  content: ":";
+}
+
+.percentage::after {
+  content: "%";
+  position: absolute;
+}
+
+.angle::after {
+  content: "°";
+  position: absolute;
 }
