@@ -1,15 +1,3 @@
-html {
-  --color-default: hsl(048, 100%, 72%);
-  --color-success: hsl(120, 100%, 72%);
-  --color-failure: hsl(000, 100%, 72%);
-  --color-generic: hsl(216, 100%, 72%);
-  --color-dark: hsl(240, 16.3%, 12.9%);
-  --color-bright: white;
-
-  --unit-size: 1em;
-  --unit-time: .25s;
-}
-
 body.dark {
   --color: var(--color-default);
   --background-color: var(--color-dark);
