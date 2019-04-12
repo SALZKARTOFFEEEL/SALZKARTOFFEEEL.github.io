@@ -10,6 +10,8 @@
   width: 24vmin;
   min-width: calc(8 * var(--unit-size));
   height: auto;
+  height: fit-content;
+  transition: width var(--unit-time), height var(--unit-time);
 
   text-align: center;
 
@@ -18,13 +20,18 @@
 
   color: var(--color);
   background-color: var(--color-dark);
-  transition: background-color var(--unit-time), color var(--unit-time);
+  transition-duration: var(--unit-time);
+  transition-property: color, background-color, width, height;
 }
 
 .color-container:hover,
 .color-container:target {
   color: var(--color-dark);
   background-color: var(--color-bright);
+}
+
+.color-container:target {
+  width: 32vmin;
 }
 
 
